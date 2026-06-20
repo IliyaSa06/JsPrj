@@ -12,6 +12,8 @@ A collection of three practical JavaScript applications including a weather app,
 
 ## 1. Weather App 🌤️
 
+<img width="1920" height="920" alt="Image" src="https://github.com/user-attachments/assets/23cea1a7-4bda-40b8-bc33-202c48b4f49e" />
+
 ### Description
 A simple and beautiful weather application that fetches real-time weather data using the OpenWeatherMap API.
 
@@ -48,6 +50,8 @@ weather-app/
 
 
 ## 2. Todo List with Timer ⏰
+
+
 
 ### Description
 Advanced task management application with timer functionality, dark mode, and statistics dashboard.
