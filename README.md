@@ -51,7 +51,7 @@ weather-app/
 
 ## 2. Todo List with Timer ⏰
 
-
+https://i.supaimg.com/be184b33-02ab-4b79-8d16-d0801cd84247/6fb4e827-00dd-4953-8890-4c9f750e9822.jpg
 
 ### Description
 Advanced task management application with timer functionality, dark mode, and statistics dashboard.
@@ -93,6 +93,8 @@ todo-timer-app/
 
 
 ## 3. Typing Speed Test ⌨️
+
+https://i.supaimg.com/be184b33-02ab-4b79-8d16-d0801cd84247/5a71d779-f296-4fb0-8afd-a2f77502fe97.jpg
 
 ### Description
 Professional typing speed test application with Persian and English language support.
