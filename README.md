@@ -8,7 +8,7 @@ A collection of three practical JavaScript applications including a weather app,
 - Todo List with Timer ⏰
 - Typing Speed Test ⌨️
 
----
+
 
 ## 1. Weather App 🌤️
 
@@ -45,7 +45,7 @@ weather-app/
     └── header.jpg
 ```
 
----
+
 
 ## 2. Todo List with Timer ⏰
 
@@ -87,7 +87,6 @@ todo-timer-app/
     └── The-Matrix-(14)-landscape.jpg
 ```
 
----
 
 ## 3. Typing Speed Test ⌨️
 
@@ -129,7 +128,7 @@ typing-speed-test/
     └── Gladiator-15.jpg  (Dark mode)
 ```
 
----
+
 
 ## 📝 Technical Notes
 
@@ -137,20 +136,20 @@ typing-speed-test/
 - Modern browser (Chrome, Firefox, Safari, Edge)
 - Internet connection (Weather App only)
 
----
+
 
 ## 📜 License
 All projects are licensed under the MIT License.
 
----
+
 
 ## 👨‍💻 Developer
 
 **Iliya Saiedi**
 
-- [GitHub](https://github.com/yourusername)
-- [LinkedIn](https://linkedin.com/in/yourusername)
-- [Email](mailto:your.email@example.com)
+- [GitHub](https://github.com/IliyaSa06)
+- [LinkedIn](linkedin.com/in/iliya-saiedi-60b760239)
+- [Email](sydyaylya3@gmail.com)
 
 ---
 
