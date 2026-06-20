@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="039185f2-8895-4b5d-8eec-001620ac7196" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../TestTypingSpeedProject/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TestTypingSpeedProject/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TestTypingSpeedProject/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../TestTypingSpeedProject/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TestTypingSpeedProject/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TestTypingSpeedProject/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="039185f2-8895-4b5d-8eec-001620ac7196" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +63,7 @@
       <workItem from="1781964633272" duration="943000" />
       <workItem from="1781965913764" duration="428000" />
       <workItem from="1781966718128" duration="47000" />
+      <workItem from="1781966956965" duration="94000" />
     </task>
     <servers />
   </component>
