@@ -1,6 +1,6 @@
 # JavaScript Projects Collection
 
-A collection of three practical JavaScript applications including a weather app, task management with timer, and typing speed test.
+A collection of three practical JavaScript applications including a weather app, task management, and typing speed test.
 
 ## Project List
 
@@ -23,8 +23,7 @@ A simple and beautiful weather application that fetches real-time weather data u
 - Show weather conditions (rainy, sunny, cloudy, etc.)
 - Display wind speed
 - Responsive design compatible with mobile devices
-- Search functionality with Enter key support
-- Attractive UI with dark theme
+- Attractive UI
 
 ### Technologies
 - HTML5, CSS3, JavaScript (ES6+)
@@ -54,15 +53,13 @@ weather-app/
 <img width="1500" height="716" alt="Image" src="https://github.com/user-attachments/assets/10f1a032-6f79-4e21-b205-6a30721c7f93" />
 
 ### Description
-Advanced task management application with timer functionality, dark mode, and statistics dashboard.
+Advanced task management application with statistics dashboard.
 
 ### Features
 - **Task Management:** Add, edit, delete, and complete tasks
 - **Built-in Timer:** Set time limits for each task with start/stop controls
 - **Timer Notifications:** Get alerted when a task timer reaches zero
 - **Dark/Light Mode:** Toggle between themes with smooth animations
-- **Advanced Filters:** All, Active, Completed, Timed
-- **Statistics Dashboard:** View total, completed, pending, and total time
 - **Local Storage:** All data saved automatically
 - **Responsive Design:** Optimized for mobile, tablet, and desktop
 - **Persian Support:** Complete RTL interface
@@ -70,7 +67,6 @@ Advanced task management application with timer functionality, dark mode, and st
 ### Technologies
 - HTML5, CSS3, JavaScript (ES6+)
 - Bootstrap 5
-- Bootstrap Icons
 - Google Fonts (Vazirmatn)
 
 ### 💻 How to Use
@@ -78,7 +74,6 @@ Advanced task management application with timer functionality, dark mode, and st
 - **Complete Task:** Click the circle next to the task
 - **Timer:** Press play button to start the timer
 - **Filter:** Use buttons at the top to filter tasks
-- **Theme:** Click the dark/light mode toggle button
 
 ### 📁 File Structure
 ```
@@ -101,27 +96,22 @@ Professional typing speed test application with Persian and English language sup
 
 ### Features
 - **Multi-language:** Persian, English, and Mixed (random) modes
-- **Step-by-Step Testing:** Complete 5 sentences per test
 - **Real-time Statistics:** Track accuracy, speed (WPM), and character count
 - **Visual Feedback:** Green border for correct typing, red for errors
-- **Progress Tracking:** Step counter and progress bar
 - **Timer Display:** Track elapsed time
 - **Dark/Light Mode:** Toggle between themes with animations
 - **Result Analysis:** Detailed performance summary with motivational feedback
-- **Particle Background:** Dynamic animated particles
 - **Responsive Design:** Optimized for all screen sizes
 
 ### Technologies
 - HTML5, CSS3, JavaScript (ES6+)
 - GSAP (Animations)
-- Google Fonts (Vazirmatn)
-- Custom particle system
 
 ### 💻 How to Use
 1. **Select Language:** Persian, English, or Mixed
 2. **Start Typing:** Type the displayed text in the text area
 3. **Complete Step:** After typing the full sentence, the next appears
-4. **View Results:** After 5 sentences, final results are shown
+4. **View Results:** After complete sentences, final results are shown
 
 ### 📁 File Structure
 ```
