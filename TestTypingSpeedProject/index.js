@@ -22,9 +22,7 @@ const finalWpm = document.querySelector("#finalWpm");
 const finalAccuracy = document.querySelector("#finalAccuracy");
 const finalTime = document.querySelector("#finalTime");
 
-// =============================================
-// لیست جملات فارسی و انگلیسی
-// =============================================
+
 const persianSentences = [
 
     "امروز روز خوبی برای شروع است.",
@@ -53,9 +51,7 @@ let totalWpm = 0;
 let stepCount = 0;
 let startTime = 0;
 
-// =============================================
-// توابع GSAP برای انیمیشن
-// =============================================
+
 function animateCardIn() {
     gsap.from(".card", {
         duration: 1,
@@ -132,9 +128,7 @@ function animateResult() {
     });
 }
 
-// =============================================
-// ایجاد ذرات پس‌زمینه
-// =============================================
+
 function createParticles() {
     const container = document.getElementById('particles-bg');
     for (let i = 0; i < 30; i++) {
@@ -149,9 +143,7 @@ function createParticles() {
     }
 }
 
-// =============================================
-// توابع تولید جملات
-// =============================================
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -162,7 +154,7 @@ function shuffleArray(array) {
 
 function generateSentences(lang) {
     let sentences = [];
-    let count = 5; // تعداد جملات
+    let count = 5;
 
     if (lang === "persian") {
         sentences = shuffleArray([...persianSentences]).slice(0, count);
@@ -176,9 +168,7 @@ function generateSentences(lang) {
     return sentences;
 }
 
-// =============================================
-// تابع دریافت جمله فعلی
-// =============================================
+
 function getCurrentSentence() {
     if (currentStep < currentSentences.length) {
         return currentSentences[currentStep];
@@ -186,9 +176,7 @@ function getCurrentSentence() {
     return null;
 }
 
-// =============================================
-// بارگذاری مرحله بعد
-// =============================================
+
 function loadNextStep() {
     if (currentStep < currentSentences.length) {
         originText = currentSentences[currentStep];
@@ -201,14 +189,12 @@ function loadNextStep() {
         charCountElement.innerHTML = "0";
         animateTextChange();
     } else {
-        // پایان تمام مراحل
+
         showResult();
     }
 }
 
-// =============================================
-// نمایش نتیجه نهایی
-// =============================================
+
 function showResult() {
     testArea.disabled = true;
     clearInterval(interval);
@@ -222,7 +208,7 @@ function showResult() {
     finalAccuracy.textContent = avgAccuracy + '%';
     finalTime.textContent = timeSpent;
 
-    // تعیین پیغام بر اساس عملکرد
+
     let icon, title, message;
 
     if (avgWpm >= 40 && avgAccuracy >= 90) {
@@ -251,23 +237,17 @@ function showResult() {
     animateResult();
 }
 
-// =============================================
-// متغیرهای تایمر
-// =============================================
+
 var timer = [0, 0, 0, 0];
 var timerRunning = false;
 var interval;
 
-// =============================================
-// توابع کمکی
-// =============================================
+
 function leadingZero(time) {
     return time <= 9 ? "0" + time : time;
 }
 
-// =============================================
-// تابع اجرای تایمر
-// =============================================
+
 function runTimer() {
     let currentTime = leadingZero(timer[0]) + ":" + leadingZero(timer[1]) + ":" + leadingZero(timer[2]);
     timerElement.innerHTML = currentTime;
@@ -281,18 +261,14 @@ function runTimer() {
     calculateWPM();
 }
 
-// =============================================
-// آپدیت پیشرفت متن
-// =============================================
+
 function updateProgress() {
     let textEntered = testArea.value;
     let progress = (textEntered.length / originText.length) * 100;
     progressBar.style.width = Math.min(progress, 100) + '%';
 }
 
-// =============================================
-// محاسبه دقت
-// =============================================
+
 function calculateAccuracy() {
     let textEntered = testArea.value;
     let correctChars = 0;
@@ -317,9 +293,7 @@ function calculateAccuracy() {
     return accuracy;
 }
 
-// =============================================
-// محاسبه سرعت (WPM)
-// =============================================
+
 function calculateWPM() {
     let textEntered = testArea.value;
     let wordsTyped = textEntered.trim().split(/\s+/).filter(word => word.length > 0).length;
@@ -330,9 +304,7 @@ function calculateWPM() {
     return wpm;
 }
 
-// =============================================
-// بررسی املای کلمات
-// =============================================
+
 function spellcheck() {
     if (testArea.disabled) return;
 
@@ -345,24 +317,24 @@ function spellcheck() {
     let wpm = calculateWPM();
 
     if (textEntered === originText) {
-        // مرحله کامل شد
+
         testWrapper.style.border = "3px solid #48bb78";
         testArea.disabled = true;
         clearInterval(interval);
         timerRunning = false;
 
-        // ذخیره آمار این مرحله
+
         totalAccuracy += accuracy;
         totalWpm += wpm;
         stepCount++;
 
         animateStepComplete();
 
-        // رفتن به مرحله بعد
+
         currentStep++;
         setTimeout(() => {
             loadNextStep();
-            // شروع مجدد تایمر
+
             timer = [0, 0, 0, 0];
             timerRunning = false;
             if (currentStep < currentSentences.length) {
@@ -378,9 +350,7 @@ function spellcheck() {
     }
 }
 
-// =============================================
-// ریست کردن تست
-// =============================================
+
 function reset() {
     clearInterval(interval);
     interval = null;
@@ -402,16 +372,14 @@ function reset() {
     progressBar.style.width = "0%";
     resultModal.classList.remove('active');
 
-    // تولید جملات جدید
+
     currentSentences = generateSentences(currentLang);
     loadNextStep();
 
     animateReset();
 }
 
-// =============================================
-// شروع تایمر
-// =============================================
+
 function start() {
     let textEnteredLength = testArea.value.length;
     if (textEnteredLength === 0 && !timerRunning && !testArea.disabled) {
@@ -420,9 +388,7 @@ function start() {
     }
 }
 
-// =============================================
-// تغییر زبان متن
-// =============================================
+
 function changeLanguage(lang) {
     currentLang = lang;
     resultModal.classList.remove('active');
@@ -436,9 +402,7 @@ function changeLanguage(lang) {
     });
 }
 
-// =============================================
-// تغییر تم (لایت/دارک مود)
-// =============================================
+
 function toggleTheme() {
     const isDark = document.body.classList.toggle('dark-mode');
 
@@ -449,9 +413,7 @@ function toggleTheme() {
     }
 }
 
-// =============================================
-// رویدادها (Event Listeners)
-// =============================================
+
 testArea.addEventListener("keypress", start);
 testArea.addEventListener("keyup", spellcheck);
 resetBtn.addEventListener("click", reset);
@@ -466,9 +428,7 @@ langBtns.forEach(btn => {
 
 themeToggle.addEventListener("click", toggleTheme);
 
-// =============================================
-// تنظیم اولیه
-// =============================================
+
 createParticles();
 changeLanguage('persian');
 

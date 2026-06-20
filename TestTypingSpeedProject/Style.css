@@ -23,21 +23,21 @@ body {
     padding: 20px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* ===== عکس پس‌زمینه اصلی ===== */
+
     background-image: url('/img/Maximus.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    /* اگر عکس لود نشد، گرادیان به عنوان fallback */
+
     background-color: #667eea;
 
     position: relative;
     overflow-x: hidden;
 }
 
-/* ===== عکس پس‌زمینه برای حالت دارک مود ===== */
+
 body.dark-mode {
     background-image: url('/img/Gladiator-15.jpg');
     background-size: cover;
@@ -47,7 +47,7 @@ body.dark-mode {
     background-color: #0f0c29;
 }
 
-/* ===== لایه اوورلی روی عکس پس‌زمینه برای خوانایی بهتر ===== */
+
 body::before {
     content: '';
     position: fixed;
@@ -75,7 +75,7 @@ body.dark-mode::before {
     overflow: hidden;
 }
 
-/* ===== بقیه استایل‌ها ===== */
+
 
 .particle {
     position: absolute;
@@ -228,7 +228,7 @@ body.dark-mode .glass-card {
     transform: scale(1.1) rotate(5deg);
 }
 
-/* ===== عکس در کارت ===== */
+
 .card-image {
     text-align: center;
     margin-bottom: 20px;
@@ -246,7 +246,7 @@ body.dark-mode .glass-card {
     transform: scale(1.02);
 }
 
-/* ===== بقیه استایل‌ها ===== */
+
 
 .lang-selector {
     display: flex;
