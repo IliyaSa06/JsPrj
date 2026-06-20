@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سنجش سرعت تایپ | حرفه‌ای</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<!-- پس‌زمینه با افکت ذرات -->
+<div id="particles-bg"></div>
+
+<div class="container">
+    <header>
+        <div class="header-left">
+            <h1 class="glow-text">Created by Iliya Saiedi</h1>
+            <p class="subtitle">دقت و سرعت خود را در تایپ بسنجید</p>
+        </div>
+        <div class="header-controls">
+            <button class="theme-toggle" id="themeToggle">
+                <span class="icon">🌙</span>
+                <span class="text">دارک مود</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="card glass-card">
+        <!-- انتخاب زبان -->
+        <div class="lang-selector">
+            <button class="lang-btn active" data-lang="persian">
+                <span class="emoji">🇮🇷</span>
+                <span>فارسی</span>
+            </button>
+            <button class="lang-btn" data-lang="english">
+                <span class="emoji">🇬🇧</span>
+                <span>انگلیسی</span>
+            </button>
+            <button class="lang-btn" data-lang="mixed">
+                <span class="emoji">🌐</span>
+                <span>ترکیبی رندوم</span>
+            </button>
+        </div>
+
+        <!-- مرحله و پیشرفت -->
+        <div class="progress-info">
+            <span class="step-label">مرحله</span>
+            <span class="step-counter" id="stepCounter">1 / 5</span>
+        </div>
+
+        <div class="pattern-box">
+            <span class="label">📝 متن الگو :</span>
+            <div id="origin-text" class="origin-text">
+                <p></p>
+            </div>
+            <div class="text-progress">
+                <div class="progress-bar" id="textProgress"></div>
+            </div>
+        </div>
+
+        <div class="test-wrapper">
+            <textarea id="test-area" placeholder="برای شروع تایپ کنید..."></textarea>
+            <div class="stats-bar">
+                <div class="stat stat-accuracy">
+                    <span class="stat-label">✅ دقت</span>
+                    <span class="stat-value" id="accuracy">100%</span>
+                </div>
+                <div class="stat stat-speed">
+                    <span class="stat-label">⚡ سرعت</span>
+                    <span class="stat-value" id="wpm">0</span>
+                    <span class="stat-unit">کلمه/دقیقه</span>
+                </div>
+                <div class="stat stat-characters">
+                    <span class="stat-label">📊 کاراکترها</span>
+                    <span class="stat-value" id="charCount">0</span>
+                    <span class="stat-unit">نوشته شده</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="meta">
+            <div class="timer-card">
+                <span class="timer-label">⏱️ زمان سپری شده</span>
+                <div class="timer" id="timerDisplay">00:00:00</div>
+            </div>
+            <button id="reset" class="reset-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                شروع مجدد
+            </button>
+        </div>
+    </div>
+
+    <!-- پیغام ارزیابی -->
+    <div class="result-modal" id="resultModal">
+        <div class="result-content glass-card">
+            <div class="result-icon" id="resultIcon">🏆</div>
+            <h2 id="resultTitle">تبریک!</h2>
+            <p id="resultMessage">شما عملکرد عالی داشتید!</p>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <span>سرعت نهایی</span>
+                    <strong id="finalWpm">0</strong>
+                    <span>کلمه/دقیقه</span>
+                </div>
+                <div class="result-stat">
+                    <span>دقت نهایی</span>
+                    <strong id="finalAccuracy">0%</strong>
+                </div>
+                <div class="result-stat">
+                    <span>زمان کل</span>
+                    <strong id="finalTime">00:00</strong>
+                </div>
+            </div>
+            <button class="reset-btn" id="resultResetBtn">تست جدید</button>
+        </div>
+    </div>
+
+    <div class="tips glass-card">
+        <h3>💡 نکات تست</h3>
+        <ul>
+            <li>هر مرحله شامل یک جمله است</li>
+            <li>پس از اتمام هر جمله، جمله بعدی ظاهر می‌شود</li>
+            <li>تایپ صحیح = حاشیه سبز | تایپ غلط = حاشیه قرمز</li>
+            <li>پس از اتمام تمام جملات، نتیجه نهایی نمایش داده می‌شود</li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
