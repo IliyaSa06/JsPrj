@@ -5,7 +5,7 @@ A collection of three practical JavaScript applications including a weather app,
 ## Project List
 
 - Weather App 🌤️
-- Todo List with Timer ⏰
+- Todo List 🎯
 - Typing Speed Test ⌨️
 
 
