@@ -49,7 +49,7 @@ weather-app/
 
 
 
-## 2. Todo List with Timer ⏰
+## 2. Todo List 🎯
 
 <img width="1500" height="716" alt="Image" src="https://github.com/user-attachments/assets/10f1a032-6f79-4e21-b205-6a30721c7f93" />
 
