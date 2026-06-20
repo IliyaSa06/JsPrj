@@ -151,7 +151,7 @@ All projects are licensed under the MIT License.
 - [LinkedIn](linkedin.com/in/iliya-saiedi-60b760239)
 - [Email](sydyaylya3@gmail.com)
 
----
+
 
 ## ⭐ Support
 If you like this collection, please give it a star ⭐ on GitHub!
